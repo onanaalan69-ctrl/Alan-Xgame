@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c3paokvogfhuw"]
+
+[ext_resource type="Texture2D" uid="uid://cd1ctguee7vjh" path="res://bgimage.png" id="1_klylv"]
+[ext_resource type="Script" uid="uid://cexprlljq32vw" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+
+[node name="TitleScreen" type="Node2D" unique_id=439028505]
+script = ExtResource("1_p3fck")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=712653315]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.68847907, 0.6881744)
+texture = ExtResource("1_klylv")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=2040539925]
+clip_contents = false
+offset_left = 334.0
+offset_top = 103.00001
+offset_right = 374.0
+offset_bottom = 143.0
+scale = Vector2(0.9028678, 0.7778427)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "Alan Xgame"
+autowrap_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=817926310]
+offset_left = 469.0
+offset_top = 245.0
+offset_right = 766.8528
+offset_bottom = 464.38257
+scale = Vector2(1.0407828, 1.6728766)
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=2019209262]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Start game"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1603926997]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Settings"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=45750317]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
