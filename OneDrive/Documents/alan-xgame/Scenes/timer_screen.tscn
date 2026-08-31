@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cxobsh018okp7"]
+
+[ext_resource type="Texture2D" uid="uid://cd1ctguee7vjh" path="res://bgimage.png" id="1_366df"]
+[ext_resource type="Script" uid="uid://d0qiyy4xbjx6h" path="res://Scenes/timer_screen.gd" id="1_f8hj7"]
+[ext_resource type="Texture2D" uid="uid://djftl6jfy8lmh" path="res://icon.svg" id="2_f8hj7"]
+
+[node name="timerScreen" type="Node2D" unique_id=527326465]
+script = ExtResource("1_f8hj7")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2098468198]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.68903565, 0.68772537)
+texture = ExtResource("1_366df")
+
+[node name="Garlic_container" type="HBoxContainer" parent="." unique_id=451482353]
+offset_left = 284.0
+offset_top = 98.0
+offset_right = 940.0
+offset_bottom = 226.0
+scale = Vector2(0.967582, 0.85301775)
+
+[node name="Garlic1" type="TextureRect" parent="Garlic_container" unique_id=147017326]
+layout_mode = 2
+
+[node name="Garlic2" type="TextureRect" parent="Garlic_container" unique_id=295658294]
+layout_mode = 2
+texture = ExtResource("2_f8hj7")
+
+[node name="Garlic3" type="TextureRect" parent="Garlic_container" unique_id=686571244]
+layout_mode = 2
+texture = ExtResource("2_f8hj7")
+
+[node name="Garlic4" type="TextureRect" parent="Garlic_container" unique_id=540582903]
+layout_mode = 2
+texture = ExtResource("2_f8hj7")
+
+[node name="Garlic5" type="TextureRect" parent="Garlic_container" unique_id=260235845]
+layout_mode = 2
+texture = ExtResource("2_f8hj7")
+
+[node name="level" type="RichTextLabel" parent="." unique_id=477743787]
+offset_left = 278.00003
+offset_top = 241.0
+offset_right = 421.00003
+offset_bottom = 299.0
+scale = Vector2(1.6635586, 1.1970838)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Level #"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=1074908244]
+offset_left = 690.00006
+offset_top = 237.0
+offset_right = 750.00006
+offset_bottom = 295.0
+scale = Vector2(1.6836323, 1.3285866)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
+fit_content = true
+autowrap_mode = 0
